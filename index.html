@@ -16,47 +16,47 @@
 <main>
     <div class="container">
         <h1>PDF转图片</h1>
-        <div class="file fullwidth mt-2">
+
             <span class="file-cta">
                 <input id="input_file" class="file-input" type="file" accept="application/pdf" onchange="loadPDF(this.files[0])">
                 <span class="file-icon">
-                    <i class="fas fa-upload"></i>
+					<i class="fas fa-upload"></i>
                 </span>
-                <span class="file-button">选择一个PDF文件</span>
-            </span>
-            <span id="file_name" class="file-name"></span>
-        <!-- </div> -->
-        <!-- <div class="content-center mt-2"> -->
-            <!-- <div class="group"> -->
-                <button class="button" onclick="prevPage()">
-                    <i class="fa fa-arrow-left"></i>
-                    <span>上一页</span>
-                </button>
-                <button class="button" onclick="nextPage()">
-                    <span>下一页</span>
-                    <i class="fa fa-arrow-right"></i>
-                </button>
-            <!-- </div> -->
-            <!-- <div id="out_type" class="group"> -->
+				<span class="file-button">选择一个PDF文件</span>
+				<span id="file_name" class="file-name"></span>
+			</span>
+
+
+            <button class="button" onclick="prevPage()">
+                <i class="fa fa-arrow-left"></i>
+                <span>上一页</span>
+            </button>
+			
+            <button class="button" onclick="nextPage()">
+                <span>下一页</span>
+                <i class="fa fa-arrow-right"></i>
+            </button>
+
+            <div id="out_type" class="group">
                 <button class="button primary">
                     <span>JPG</span>
                 </button>
                 <button class="button">
                     <span>PNG</span>
                 </button>
-            <!-- </div> -->
+            </div>
+			
             <button class="button primary" onclick="save()">
                 <span>保存本页</span>
             </button>
+			
             <button class="button primary" onclick="saveAll()">
                 <span>全部保存</span>
             </button>
-        </div>
-        <p id="page_num"></p>
-        <div class="content-center mt-2">
-            <canvas id="preview" class="bordered" hidden></canvas>
-        </div>
+			
     </div>
+    <p id="page_num"></p>
+    <canvas id="preview" class="bordered" hidden></canvas>
 </main>
 
 <script src="script/pdf228.js"></script>
